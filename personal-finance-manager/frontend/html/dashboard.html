@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Personal Finance Manager</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Welcome, User!</h2>
+            <div class="balance">
+                <h3>Your Balance: $<span id="balanceAmount">0.00</span></h3>
+            </div>
+            <div class="recent-transactions">
+                <h3>Recent Transactions</h3>
+                <table id="transactionsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Recent transactions will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="analytics">
+                <h3>Analytics</h3>
+                <div id="monthlySpending">
+                    <h4>Monthly Spending</h4>
+                    <canvas id="monthlySpendingChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Personal Finance Manager. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
